@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { JobsService } from '../../globalComponents/jobs.service';
 import { Job } from 'src/app/Interfaces/jobInfo';
+import { BoardCardComponent } from '../board-card/board-card.component';
 
 @Component({
   selector: 'app-board',
