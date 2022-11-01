@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Job } from 'src/app/Interfaces/jobInfo';
+import * as moment from 'moment';
 
 @Component({
   selector: 'app-board-card',
@@ -27,10 +28,10 @@ export class BoardCardComponent implements OnInit {
     employment_type: ["none"]
   }
 
+  
   constructor() { }
-
   date: Date = new Date();
-  parsedDate: string = "none";
+  passed: string = "none";
 
   ngOnInit(): void {
     this.getCreatedDate(this.job.createdAt);
@@ -44,10 +45,10 @@ export class BoardCardComponent implements OnInit {
     this.date = new Date(date);
 
     day = this.date.getDate();
-    month = this.date.getMonth() + 1;
+    month = this.date.getMonth();
     year = this.date.getFullYear();
 
-    this.parsedDate = year + "/" + month + "/" + day;
+    this.passed = moment([year, month, day]).fromNow();
   }
 
 }

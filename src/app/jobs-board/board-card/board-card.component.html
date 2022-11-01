@@ -1,5 +1,5 @@
-<div class="w-5/6 mx-auto px-4 py-6 flex">
-    <div class="card__photo">
+<div class="w-5/6 mx-auto px-4 py-6 flex bg-white mb-2">
+    <div class="card__photo mr-6">
         <img class="w-20 h-20 object-cover rounded-full" src="{{job.pictures[0]}}" alt="Job image">
     </div>
     <div class="card__shortInfo">
@@ -13,5 +13,7 @@
             {{job.address}}
         </div>
     </div>
+    <div class="card__created w-32 ml-auto">
+        {{passed}}
+    </div>
 </div>
-{{parsedDate}}
