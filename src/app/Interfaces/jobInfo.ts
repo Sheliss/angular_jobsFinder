@@ -14,3 +14,16 @@ export interface Job {
     description: string,
     employment_type: Array<string>
 }
+
+export interface JobMainInfo {
+    name: string,
+    title: string,
+    salary: string,
+    createdAt: string,
+    description: string
+}
+
+export interface JobAdditionalInfo {
+    employment_type: Array<string>,
+    benefits: Array<string>
+}
