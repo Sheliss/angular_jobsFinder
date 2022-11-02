@@ -1,3 +1,8 @@
-<p>job works!</p>
-
-{{ jobMain.name }}
+<div class="container mx-auto flex">
+    <div class="job-left w-9/12 mr-20">
+        <app-job-info [data]="jobMain"></app-job-info>
+        <app-job-additional-info [data]="jobAdditional"></app-job-additional-info>
+        <app-job-pictures [data]="jobPictures"></app-job-pictures>
+    </div>
+    <div class="job-right w-3/12"></div>
+</div>

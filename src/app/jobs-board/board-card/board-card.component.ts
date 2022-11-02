@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Job } from 'src/app/Interfaces/jobInfo';
 import * as moment from 'moment';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-board-card',
@@ -29,7 +30,7 @@ export class BoardCardComponent implements OnInit {
   }
 
   
-  constructor() { }
+  constructor( private router: Router ) { }
   date: Date = new Date();
   passed: string = "none";
 
@@ -49,6 +50,10 @@ export class BoardCardComponent implements OnInit {
     year = this.date.getFullYear();
 
     this.passed = moment([year, month, day]).fromNow();
+  }
+
+  goToDetailed() {
+    this.router.navigateByUrl('/job/' + this.job.id)
   }
 
 }
