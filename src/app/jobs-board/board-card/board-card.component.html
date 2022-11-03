@@ -1,19 +1,19 @@
-<div class="w-5/6 mx-auto px-4 py-6 flex bg-white mb-2">
+<div class="w-5/6 h-40 mx-auto px-4 py-6 flex bg-white mb-2 rounded-lg shadow-card-shadow">
     <div class="card__photo mr-6">
         <img class="w-20 h-20 max-w-20 max-h-20 object-cover rounded-full" src="{{job.pictures[0]}}" alt="Job image">
     </div>
     <div class="card__shortInfo">
-        <div class="card__title" (click)="goToDetailed()">
+        <div class="card__title h-12 font-mont text-xl font-bold leading-6 text-main-blue mb-2 cursor-pointer" (click)="goToDetailed()">
             {{job.title}}
         </div>
-        <div class="card__companyName">
+        <div class="card__companyName font-mont text-base text-card-gray mb-2">
             {{job.name}}
         </div>
-        <div class="card__location">
+        <div class="card__location font-mont text-base text-card-gray">
             {{job.address}}
         </div>
     </div>
-    <div class="card__created w-32 ml-auto">
+    <div class="card__created w-32 ml-auto text-right self-end font-mont text-base text-card-gray">
         {{passed}}
     </div>
 </div>
