@@ -2,3 +2,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.apply__button {
+    @apply text-xs uppercase font-mont font-semibold text-white bg-main-blue py-4 px-7 rounded-lg mb-8 hover:scale-110 ease-linear duration-75;
+}

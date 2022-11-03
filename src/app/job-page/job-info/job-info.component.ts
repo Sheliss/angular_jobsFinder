@@ -20,5 +20,8 @@ export class JobInfoComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onApply() {
+    alert('Applied!')
+  }
 
 }

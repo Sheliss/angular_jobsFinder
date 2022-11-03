@@ -1,8 +1,16 @@
 <section class="mainInfo">
-    <div class="job__titleRow flex">
-        <div class="title">
-            {{ data.title }}
+    <div class="job__pageNameRow mt-14 font-mont font-bold text-3xl text-main-blue border-b pb-2 border-main-blue border-opacity-10 mb-9">
+        <div class="pageNameRow__Name">
+            Job Details
         </div>
+    </div>
+    <div class="job__buttonRow">
+        <button class="apply__button" (click)="onApply()">Apply Now</button>
+    </div>
+    <div class="job__titleRow flex">
+        <h1 class="title">
+            {{ data.title }}
+        </h1>
         <div class="salary">
             {{ data.salary }}
         </div>
