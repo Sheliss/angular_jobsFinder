@@ -4,21 +4,26 @@
             Job Details
         </div>
     </div>
-    <div class="job__buttonRow">
+    <div class="job__buttonRow mb-8">
         <button class="apply__button" (click)="onApply()">Apply Now</button>
     </div>
-    <div class="job__titleRow flex">
-        <h1 class="title">
+    <div class="job__titleRow flex flex-wrap">
+        <h1 class="title font-mont text-2xl	text-main-blue font-bold mr-16">
             {{ data.title }}
         </h1>
-        <div class="salary">
-            {{ data.salary }}
+        <div class="salary font-mont text-xl text-main-blue leading-6 font-bold">
+            € {{ data.salary}}
+           <br>
+            <span class="text-lg font-normal">Euro, per year</span>
+        </div>
+        <div class="job__whenPosted basis-full font-roboto text-lg leading-6 text-sub-blue opacity-30 mt-2">
+            Posted {{ data.createdAt }}
         </div>
     </div>
-    <div class="job__whenPosted">
-        Posted {{ data.createdAt }}
-    </div>
-    <div class="job__description whitespace-pre-line">
+    <div class="job__description whitespace-pre-line font-roboto text-lg leading-6 text-main-blue">
         {{ data.description }}
+    </div>
+    <div class="job__buttonRow mb-20">
+        <button class="apply__button" (click)="onApply()">Apply Now</button>
     </div>
 </section>

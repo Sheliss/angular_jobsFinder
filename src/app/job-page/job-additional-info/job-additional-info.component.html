@@ -1,8 +1,25 @@
 <section class="additionalInfo">
-    <div class="type__row" *ngFor="let type of data.employment_type">
-        {{type}}
+    <div class="additionalInfo__title font-mont text-2xl font-bold text-main-blue mb-6">
+        Additional Info
     </div>
-    <div class="benefit__row" *ngFor="let benefit of data.benefits">
-        {{benefit}}
+    <div class="type__row mb-6">
+        <div class="type__title info__subtitle">
+            Employment type
+        </div>
+        <div class="row flex">
+            <div class="type__card info__card text-card-b-text bg-card-b-bg bg-opacity-30 border-card-b-border border-opacity-30" *ngFor="let type of data.employment_type">
+                {{type}}
+            </div>
+        </div>
+    </div>
+    <div class="benefit__row mb-20">
+        <div class="benefit__title info__subtitle">
+            Benefits
+        </div>
+        <div class="row flex">
+            <div class="benefit__card info__card text-card-y-text bg-card-y-bg bg-opacity-20 border-card-y-border" *ngFor="let benefit of data.benefits">
+                {{benefit}}
+            </div>
+        </div>
     </div>
 </section>
