@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Job, JobAdditionalInfo, JobMainInfo } from 'src/app/Interfaces/jobInfo';
 import { JobsService } from 'src/app/globalComponents/jobs.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import * as moment from 'moment';
+
 
 @Component({
   selector: 'app-job',
@@ -28,7 +29,7 @@ export class JobComponent implements OnInit {
   passed: string = "none";
 
 
-  constructor(private jobsService: JobsService, private route: ActivatedRoute) { }
+  constructor(private jobsService: JobsService, private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
 
@@ -74,6 +75,10 @@ export class JobComponent implements OnInit {
     year = this.date.getFullYear();
 
     this.passed = moment([year, month, day]).fromNow();
+  }
+
+  onClickReturn = () => {
+    this.router.navigateByUrl('')
   }
 
 }

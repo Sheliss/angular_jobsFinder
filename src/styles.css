@@ -14,3 +14,13 @@
 .info__card {
     @apply font-mont text-base leading-4 font-bold rounded-lg py-4 border w-56 text-center mr-2 last:mr-0;
 }
+
+
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}

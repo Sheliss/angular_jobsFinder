@@ -4,6 +4,7 @@ import { JobComponent } from './job/job.component';
 import { JobInfoComponent } from './job-info/job-info.component';
 import { JobAdditionalInfoComponent } from './job-additional-info/job-additional-info.component';
 import { JobPicturesComponent } from './job-pictures/job-pictures.component';
+import { JobLocationComponent } from './job-location/job-location.component';
 
 
 
@@ -13,7 +14,8 @@ import { JobPicturesComponent } from './job-pictures/job-pictures.component';
     JobComponent,
     JobInfoComponent,
     JobAdditionalInfoComponent,
-    JobPicturesComponent
+    JobPicturesComponent,
+    JobLocationComponent
   ],
   imports: [
     CommonModule

@@ -1,8 +1,18 @@
-<div class="container mx-auto flex">
-    <div class="job-left w-9/12 mr-20">
-        <app-job-info [data]="jobMain"></app-job-info>
-        <app-job-additional-info [data]="jobAdditional"></app-job-additional-info>
-        <app-job-pictures [data]="jobPictures"></app-job-pictures>
+<div class="container mx-auto">
+    <div *ngIf="jobMain.name !== 'none'" class="job__inner w-5/6 mx-auto flex flex-wrap mb-20">
+        <div class="job-left w-3/5 mr-20">
+            <app-job-info [data]="jobMain"></app-job-info>
+            <app-job-additional-info [data]="jobAdditional"></app-job-additional-info>
+            <app-job-pictures [data]="jobPictures"></app-job-pictures>
+        </div>
+        <div class="job-right w-1/5"></div>
     </div>
-    <div class="job-right w-3/12"></div>
+    <div class="row mb-40">
+        <button (click)="onClickReturn()" class="return__button text-xs font-mont font-semibold uppercase text-main-blue py-4 pl-12 pr-6 relative bg-return bg-opacity-20 rounded-lg hover:scale-110 ease-linear duration-75">
+            <span class="material-symbols-outlined w-3 text-lg absolute left-6 -translate-y-1/4">
+                arrow_back_ios
+            </span>
+            Return to job board
+        </button>
+    </div>
 </div>
