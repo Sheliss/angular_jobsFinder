@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgxPaginationModule } from 'ngx-pagination';
 import { BoardComponent } from './board/board.component';
 import { BoardCardComponent } from './board-card/board-card.component';
 
@@ -11,7 +12,8 @@ import { BoardCardComponent } from './board-card/board-card.component';
     BoardCardComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    NgxPaginationModule
   ],
   exports: [
     BoardComponent

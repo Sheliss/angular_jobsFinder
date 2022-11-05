@@ -20,7 +20,35 @@
 .material-symbols-outlined {
   font-variation-settings:
   'FILL' 0,
-  'wght' 400,
+  'wght' 700,
   'GRAD' 0,
   'opsz' 48
+}
+
+/* Pagination */
+
+
+
+.board__pagination {
+    @apply flex justify-center
+}
+
+.boardPagination__icon {
+    @apply text-xl leading-7 h-6 text-pagination-arrow hover:text-pagination-hover border-pagination-border cursor-pointer
+}
+
+.boardPagination__icon.disabled {
+    @apply pointer-events-none text-opacity-30;
+}
+
+.jobBoard__switch.current {
+    @apply text-pagination-hover;
+}
+
+.jobBoard__switch.current::after {
+    height: 1px;
+    width: 28px;
+    content: '';
+    @apply bg-pagination-hover block absolute;
+    bottom: -8px;
 }

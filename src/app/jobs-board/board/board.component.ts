@@ -10,6 +10,8 @@ import { Job } from 'src/app/Interfaces/jobInfo';
 })
 export class BoardComponent implements OnInit {
   jobs: Job[] = [];
+  page: number = 1;
+  false: boolean = false;
 
   constructor(private jobsService: JobsService) { }
 
