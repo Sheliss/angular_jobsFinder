@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { JobLocation } from 'src/app/Interfaces/jobInfo';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-job-location',
@@ -17,11 +18,16 @@ export class JobLocationComponent implements OnInit {
       long: 0
     }
   } 
+  
+  mapUrl: string = "";
 
-
-  constructor() { }
+  constructor(private sanitizer:DomSanitizer) { }
 
   ngOnInit(): void {
+
+    this.mapUrl = 'https://maps.google.com/maps?q=' + this.data.location.lat + ', ' + this.data.location.long + '&z=15&output=embed';
+
+
   }
 
 }
