@@ -5,6 +5,7 @@ import { JobInfoComponent } from './job-info/job-info.component';
 import { JobAdditionalInfoComponent } from './job-additional-info/job-additional-info.component';
 import { JobPicturesComponent } from './job-pictures/job-pictures.component';
 import { JobLocationComponent } from './job-location/job-location.component';
+import { SafePipe } from './safe.pipe';
 
 
 
@@ -15,7 +16,8 @@ import { JobLocationComponent } from './job-location/job-location.component';
     JobInfoComponent,
     JobAdditionalInfoComponent,
     JobPicturesComponent,
-    JobLocationComponent
+    JobLocationComponent,
+    SafePipe
   ],
   imports: [
     CommonModule

@@ -16,7 +16,7 @@
             </div>
         </div>
         <div class="jobLocation__bot">
-            <iframe src="{{mapUrl}}" width="256" height="152" frameborder="0" style="border:0"></iframe>
+            <iframe [src]="mapUrl | safe" width="256" height="152" frameborder="0" style="border:0; border-bottom-left-radius: 8px; border-bottom-right-radius: 8px;"></iframe>
         </div>
     </div>
 </section>
