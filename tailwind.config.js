@@ -24,7 +24,8 @@ module.exports = {
       'pagination-arrow': '#7D859C',
       'pagination-border': '#DEE3EF',
       'pagination-number': '#70778B',
-      'pagination-hover': '#5876C5'
+      'pagination-hover': '#5876C5',
+      'map-bg': '#2A3047'
     },
     boxShadow: {
       'card-shadow': '2px 1px 7px rgba(0, 0, 0, 0.08), 0px 2px 1px -1px rgba(0, 0, 0, 0.04), 0px 1px 3px rgba(0, 0, 0, 0.12)'

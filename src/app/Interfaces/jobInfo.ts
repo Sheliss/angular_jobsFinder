@@ -7,7 +7,7 @@ export interface Job {
     salary: string,
     address: string,
     benefits: Array<string>,
-    location: Object,
+    location: JobMap,
     pictures: Array<string>,
     createdAt: string,
     updatedAt: string,
@@ -16,7 +16,6 @@ export interface Job {
 }
 
 export interface JobMainInfo {
-    name: string,
     title: string,
     salary: string,
     createdAt: string,
@@ -26,4 +25,18 @@ export interface JobMainInfo {
 export interface JobAdditionalInfo {
     employment_type: Array<string>,
     benefits: Array<string>
+}
+
+
+export interface JobLocation {
+    name: string,
+    address: string,
+    phone: string,
+    email: string,
+    location: JobMap
+}
+
+export interface JobMap {
+    lat: number,
+    long: number
 }

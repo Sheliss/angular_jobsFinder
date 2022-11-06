@@ -8,7 +8,6 @@ import { JobMainInfo } from 'src/app/Interfaces/jobInfo';
 })
 export class JobInfoComponent implements OnInit {
   @Input() data: JobMainInfo = {
-    name: "none",
     title: "none",
     salary: "0",
     createdAt: "0",

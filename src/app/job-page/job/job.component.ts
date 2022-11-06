@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Job, JobAdditionalInfo, JobMainInfo } from 'src/app/Interfaces/jobInfo';
+import { Job, JobAdditionalInfo, JobLocation, JobMainInfo } from 'src/app/Interfaces/jobInfo';
 import { JobsService } from 'src/app/globalComponents/jobs.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import * as moment from 'moment';
@@ -13,7 +13,6 @@ import * as moment from 'moment';
 export class JobComponent implements OnInit {
   jobId: string = "-1";
   jobMain: JobMainInfo = {
-    name: "none",
     title: "none",
     salary: "0",
     createdAt: "0",
@@ -23,6 +22,17 @@ export class JobComponent implements OnInit {
     employment_type: ["none"],
     benefits: ["none"]
   }
+  jobLocation: JobLocation = {
+    name: "none",
+    address: "none",
+    phone: "none",
+    email: "none",
+    location: {
+      lat: 0,
+      long: 0
+    }
+  }
+
   jobPictures: Array<string> = [];
 
   date: Date = new Date();
@@ -49,7 +59,6 @@ export class JobComponent implements OnInit {
       this.getCreatedDate(currentJob.createdAt);
 
       this.jobMain = {
-        name: currentJob.name,
         title: currentJob.title,
         salary: currentJob.salary,
         createdAt: this.passed,
@@ -59,6 +68,17 @@ export class JobComponent implements OnInit {
         employment_type: currentJob.employment_type,
         benefits: currentJob.benefits
       }
+      this.jobLocation = {
+        name: currentJob.name,
+        address: currentJob.address,
+        phone: currentJob.phone,
+        email: currentJob.email,
+        location: {
+          lat: currentJob.location.lat,
+          long: currentJob.location.long
+        }
+      }
+
       this.jobPictures = currentJob.pictures
     }
   }

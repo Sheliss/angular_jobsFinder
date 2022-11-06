@@ -1,1 +1,22 @@
-<p>job-location works!</p>
+<section>
+    <div class="jobLocation mt-14">
+        <div class="jobLocation__top w-64 px-8 pt-6 pb-3 bg-map-bg text-white rounded-t-lg">
+            <div class="jobLocation__name font-mont font-bold text-lg leading-5 mb-2">
+                Department name. <br>
+                {{data.name}}.
+            </div>
+            <div class="jobLocation__address font-roboto text-base leading-5 mb-2">
+                {{data.address}}
+            </div>
+            <div class="jobLocation__number font-roboto text-base leading-5">
+                {{data.phone}}
+            </div>
+            <div class="jobLocation__email font-roboto text-base leading-5">
+                {{data.email}}
+            </div>
+        </div>
+        <div class="jobLocation__bot">
+            <iframe src="https://maps.google.com/maps?q={{data.location.lat}}, {{data.location.long}}&z=15&output=embed" width="256" height="152" frameborder="0" style="border:0"></iframe>
+        </div>
+    </div>
+</section>
