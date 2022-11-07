@@ -1,4 +1,7 @@
 <div class="container mx-auto">
+    <div class="loading" *ngIf="jobMain.title === 'none'">
+        <div class="lds-default"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+    </div>
     <div *ngIf="jobMain.title !== 'none'" class="job__inner w-5/6 mx-auto flex flex-wrap mb-20">
         <div class="job-left w-3/5 mr-20">
             <app-job-info [data]="jobMain"></app-job-info>

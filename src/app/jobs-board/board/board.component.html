@@ -1,6 +1,9 @@
 <section class="jobBoard">
     <div class="container mx-auto">
         <div class="jobBoard__inner py-7">
+            <div class="loading" *ngIf="jobs.length === 0">
+                <div class="lds-default"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+            </div>
             <div *ngIf="jobs.length !== 0">
                 <div class="jobBoard__list mb-12">
                     <div *ngFor="let job of jobs | paginate: { itemsPerPage: 10, currentPage: page }">
